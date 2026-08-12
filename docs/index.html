@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="ScreenShooter captures visible areas, full scrolling pages, and selected elements as PNG or PDF." />
+    <meta name="theme-color" content="#09082a" />
+    <meta property="og:title" content="ScreenShooter — capture more than the screen" />
+    <meta property="og:description" content="A lightweight browser extension for clean full-page screenshots." />
+    <meta property="og:image" content="assets/social-preview.png" />
+    <title>ScreenShooter — Full-page screenshots</title>
+    <link rel="icon" href="assets/icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+    <header class="nav shell">
+      <a class="brand" href="#top" aria-label="ScreenShooter home">
+        <img src="assets/icon.png" alt="" />
+        <span>ScreenShooter</span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#features" data-i18n="navFeatures">Features</a>
+        <a href="#install" data-i18n="navInstall">Install</a>
+        <a href="privacy.html" data-i18n="navPrivacy" data-privacy-link>Privacy</a>
+        <button class="language" type="button" aria-label="Change language">RU</button>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span><span data-i18n="eyebrow">Lightweight browser extension</span></div>
+          <h1 data-i18n="heroTitle">Capture more than what fits on the screen.</h1>
+          <p data-i18n="heroText">Save a visible area, an entire scrolling page, or one precise element. Clean PNG and PDF exports in a couple of clicks.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/javedius/ScreenShooter" data-i18n="getExtension">Get the extension</a>
+            <a class="button secondary" href="#features" data-i18n="seeFeatures">See how it works</a>
+          </div>
+          <div class="trust">
+            <span><b>✓</b><span data-i18n="local">Processed locally</span></span>
+            <span><b>✓</b><span data-i18n="noAccount">No account</span></span>
+            <span><b>✓</b><span data-i18n="openSource">Open source</span></span>
+          </div>
+        </div>
+
+        <div class="product-card" aria-label="ScreenShooter extension preview">
+          <div class="browser-bar"><i></i><i></i><i></i><span>screenshooter</span></div>
+          <div class="popup-preview">
+            <div class="preview-title">
+              <img src="assets/icon.png" alt="" />
+              <div><strong>ScreenShooter</strong><small data-i18n="previewSubtitle">Choose what to capture</small></div>
+            </div>
+            <div class="format"><span class="active">PNG</span><span>PDF</span></div>
+            <div class="capture active"><span class="capture-icon">▣</span><span><strong data-i18n="visibleTitle">Visible area</strong><small data-i18n="visibleText">Everything currently on screen</small></span></div>
+            <div class="capture"><span class="capture-icon">↕</span><span><strong data-i18n="fullTitle">Full page</strong><small data-i18n="fullText">The whole scrolling page</small></span></div>
+            <div class="capture"><span class="capture-icon">⌖</span><span><strong data-i18n="elementTitle">Select element</strong><small data-i18n="elementText">Pick one part of the page</small></span></div>
+          </div>
+          <div class="page-strip"><span></span><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="section shell" id="features">
+        <div class="section-heading">
+          <span class="kicker" data-i18n="featuresKicker">Three capture modes</span>
+          <h2 data-i18n="featuresTitle">The right screenshot every time.</h2>
+          <p data-i18n="featuresText">From a quick snapshot to a page several screens long.</p>
+        </div>
+        <div class="feature-grid">
+          <article><span class="number">01</span><div class="feature-symbol">▣</div><h3 data-i18n="visibleTitle">Visible area</h3><p data-i18n="featureVisible">Capture the current browser viewport exactly as you see it.</p></article>
+          <article class="featured"><span class="number">02</span><div class="feature-symbol">↕</div><h3 data-i18n="fullTitle">Full page</h3><p data-i18n="featureFull">Automatically scroll and stitch the page into one clean image.</p></article>
+          <article><span class="number">03</span><div class="feature-symbol">⌖</div><h3 data-i18n="elementTitle">Select element</h3><p data-i18n="featureElement">Point at a page element and capture only the part you need.</p></article>
+        </div>
+      </section>
+
+      <section class="clean-section shell">
+        <div class="clean-visual" aria-hidden="true">
+          <div class="page-demo"><div class="demo-nav"></div><div class="demo-grid"><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="cookie"><span></span><b></b></div><div class="chat">●</div></div>
+          <div class="clean-badge"><span>✦</span><strong data-i18n="cleanBadge">Clean capture</strong></div>
+        </div>
+        <div class="clean-copy">
+          <span class="kicker" data-i18n="cleanKicker">Less cleanup</span>
+          <h2 data-i18n="cleanTitle">The page, without the clutter.</h2>
+          <p data-i18n="cleanText">During full-page capture, ScreenShooter hides scrollbars, repeated sticky headers, cookie banners, chat widgets, and common advertising overlays.</p>
+          <ul>
+            <li data-i18n="cleanOne">No repeated sticky navigation</li>
+            <li data-i18n="cleanTwo">No scrollbar in the final image</li>
+            <li data-i18n="cleanThree">Cleaner long screenshots</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="formats shell">
+        <div><span class="format-mark">PNG</span><h3 data-i18n="pngTitle">Pixel-perfect images</h3><p data-i18n="pngText">Ideal for sharing, documentation, and visual references.</p></div>
+        <div><span class="format-mark">PDF</span><h3 data-i18n="pdfTitle">Ready-to-send documents</h3><p data-i18n="pdfText">Save a long capture as a convenient PDF file.</p></div>
+      </section>
+
+      <section class="install section shell" id="install">
+        <div class="section-heading">
+          <span class="kicker" data-i18n="installKicker">Install in a minute</span>
+          <h2 data-i18n="installTitle">Start capturing.</h2>
+        </div>
+        <ol class="steps">
+          <li><span>1</span><div><h3 data-i18n="stepOneTitle">Download</h3><p data-i18n="stepOneText">Download or clone ScreenShooter from GitHub.</p></div></li>
+          <li><span>2</span><div><h3 data-i18n="stepTwoTitle">Open extensions</h3><p data-i18n="stepTwoText">Visit chrome://extensions and enable Developer mode.</p></div></li>
+          <li><span>3</span><div><h3 data-i18n="stepThreeTitle">Load it</h3><p data-i18n="stepThreeText">Choose “Load unpacked” and select the project folder.</p></div></li>
+        </ol>
+        <a class="button primary" href="https://github.com/javedius/ScreenShooter" data-i18n="openGithub">Open on GitHub</a>
+      </section>
+
+      <section class="cta shell">
+        <img src="assets/icon.png" alt="" />
+        <div><h2 data-i18n="ctaTitle">One extension. The whole page.</h2><p data-i18n="ctaText">Capture exactly what you need and keep moving.</p></div>
+        <a class="button light" href="https://github.com/javedius/ScreenShooter" data-i18n="getExtension">Get the extension</a>
+      </section>
+    </main>
+
+    <footer class="shell">
+      <a class="brand" href="#top"><img src="assets/icon.png" alt="" /><span>ScreenShooter</span></a>
+      <p data-i18n="footerText">Lightweight screenshot extension for Chromium browsers.</p>
+      <div><a href="https://github.com/javedius/ScreenShooter">GitHub</a><a href="privacy.html" data-i18n="navPrivacy" data-privacy-link>Privacy</a></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

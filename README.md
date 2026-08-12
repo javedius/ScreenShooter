@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md)
 
+[Website](https://javedius.github.io/ScreenShooter/) · [Privacy Policy](https://javedius.github.io/ScreenShooter/privacy.html)
+
 ![ScreenShooter](assets/github-social-preview.png)
 
 ScreenShooter is a browser extension for capturing visible areas, full scrolling pages, and selected page elements. Screenshots can be saved as PNG or PDF.

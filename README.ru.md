@@ -2,6 +2,8 @@
 
 [English](README.md) | [Русский](README.ru.md)
 
+[Сайт](https://javedius.github.io/ScreenShooter/) · [Политика конфиденциальности](https://javedius.github.io/ScreenShooter/privacy.ru.html)
+
 ![ScreenShooter](assets/github-social-preview.png)
 
 ScreenShooter — расширение для браузера, которое сохраняет видимую область, всю прокручиваемую страницу или выбранный элемент в PNG либо PDF.
