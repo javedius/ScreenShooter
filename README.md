@@ -1,32 +1,42 @@
 # ScreenShooter
 
-Минимальное расширение для Chromium-браузеров: сохраняет видимую область, всю прокручиваемую страницу или выбранный DOM-элемент в PNG либо PDF.
+[English](README.md) | [Русский](README.ru.md)
 
-Перед захватом можно выбрать формат PNG или PDF.
+![ScreenShooter](assets/github-social-preview.png)
 
-Интерфейс автоматически переключается между русским и английским по языку браузера. Все пользовательские строки хранятся в `shared/i18n.js`.
+ScreenShooter is a browser extension for capturing visible areas, full scrolling pages, and selected page elements. Screenshots can be saved as PNG or PDF.
 
-## Структура
+## Features
 
-- `background/` — сценарии захвата, работа с вкладкой и доставка результата.
-- `page/` — небольшие функции, исполняемые внутри снимаемой страницы.
-- `offscreen/` — склейка canvas, обрезка, PNG и PDF.
-- `popup/` — интерфейс, настройки и пользовательские действия.
-- `shared/` — общие параметры, имена файлов и сообщения об ошибках.
+- Capture the visible area of the current tab.
+- Capture an entire scrolling page.
+- Select and capture a specific page element.
+- Export screenshots as PNG or PDF.
+- Support regular pages and applications with internal scroll containers.
+- Hide scrollbars and repeated fixed or sticky elements during full-page capture.
+- Remove common cookie banners, chat widgets, and advertising overlays.
+- Automatically switch between English and Russian based on the browser language.
 
-Во время полностраничного захвата расширение временно скрывает полосу прокрутки, повторяющиеся закреплённые элементы, cookie-баннеры, популярные чат-виджеты и рекламные оверлеи.
+## Installation
 
-## Установка
+1. Download or clone the repository.
+2. Open `chrome://extensions` or `edge://extensions`.
+3. Enable **Developer mode**.
+4. Click **Load unpacked**.
+5. Select the project directory.
 
-1. Откройте `chrome://extensions` (или `edge://extensions`).
-2. Включите **Режим разработчика**.
-3. Нажмите **Загрузить распакованное расширение**.
-4. Выберите эту папку проекта.
+Screenshots are saved to `Downloads/ScreenShooter`.
 
-Снимки автоматически сохраняются в папку `Загрузки/ScreenShooter`.
+## Project structure
 
-## Ограничения MVP
+- `background/` contains capture workflows, tab access, and output delivery.
+- `page/` contains functions executed inside the captured page.
+- `offscreen/` handles canvas composition, cropping, PNG, and PDF generation.
+- `popup/` contains the extension interface and settings.
+- `shared/` contains localization, shared options, filenames, and error messages.
 
-- Служебные страницы браузера (`chrome://`, магазин расширений и похожие) недоступны расширениям.
-- Некоторые нестандартные закреплённые элементы могут повторяться на длинном снимке.
-- Очень высокие страницы могут превысить максимальный размер canvas браузера.
+## MVP limitations
+
+- Browser system pages such as `chrome://` and extension stores cannot be captured.
+- Some non-standard fixed elements may still appear more than once in a long screenshot.
+- Extremely tall pages may exceed the browser's maximum canvas size.

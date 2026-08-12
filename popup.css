@@ -14,9 +14,8 @@ main { padding: 18px; }
 header { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
 
 .logo {
-  display: grid; place-items: center; width: 42px; height: 42px;
-  border-radius: 13px; color: white; font-weight: 800; font-size: 20px;
-  background: linear-gradient(145deg, #725cff, #4431ce);
+  display: block; width: 42px; height: 42px;
+  border-radius: 13px;
   box-shadow: 0 7px 18px #5844df40;
 }
 
