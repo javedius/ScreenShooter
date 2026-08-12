@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "ScreenShooter",
+  "version": "0.1.0",
+  "description": "Capture visible areas, full pages, and selected elements.",
+  "permissions": ["activeTab", "downloads", "offscreen", "scripting", "storage"],
+  "action": {
+    "default_title": "ScreenShooter",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background/main.js",
+    "type": "module"
+  }
+}

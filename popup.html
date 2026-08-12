@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ScreenShooter</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="logo">S</div>
+        <div>
+          <h1>ScreenShooter</h1>
+          <p data-i18n="subtitle"></p>
+        </div>
+      </header>
+
+      <fieldset class="format" id="format">
+        <legend data-i18n="format"></legend>
+        <label><input type="radio" name="format" value="png" checked /><span>PNG</span></label>
+        <label><input type="radio" name="format" value="pdf" /><span>PDF</span></label>
+      </fieldset>
+
+      <section class="actions" data-i18n-aria-label="captureMode">
+        <button id="visible" type="button">
+          <span class="icon">▣</span>
+          <span><strong data-i18n="visibleTitle"></strong><small data-i18n="visibleDescription"></small></span>
+        </button>
+        <button id="full" type="button">
+          <span class="icon">↕</span>
+          <span><strong data-i18n="fullTitle"></strong><small data-i18n="fullDescription"></small></span>
+        </button>
+        <button id="element" type="button">
+          <span class="icon">⌖</span>
+          <span><strong data-i18n="elementTitle"></strong><small data-i18n="elementDescription"></small></span>
+        </button>
+      </section>
+
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </main>
+    <script type="module" src="popup/main.js"></script>
+  </body>
+</html>
